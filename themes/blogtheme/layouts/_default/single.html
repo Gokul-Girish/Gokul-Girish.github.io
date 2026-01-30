@@ -1,0 +1,16 @@
+{{ define "main" }}
+<article class="container">
+    <nav class="breadcrumb">
+        <a href="{{ .Section | relURL }}">← back to {{ .Section }}</a>
+    </nav>
+    
+    <header class="post-header">
+        <h1>{{ .Title }}</h1>
+        <time class="meta-date">{{ .Date.Format "January 02, 2006" }}</time>
+    </header>
+
+    <div class="post-content">
+        {{ .Content }}
+    </div>
+</article>
+{{ end }}

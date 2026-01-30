@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Olfactory Models | Gokul T G</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <header>
+    <nav class="container">
+        <ul class="nav-links">
+            
+            <li><a href="/">home</a></li>
+            
+            <li><a href="/blog">blog</a></li>
+            
+            <li><a href="/projects">projects</a></li>
+            
+            <li><a href="/notes">notes</a></li>
+            
+        </ul>
+    </nav>
+</header>
+    <main>
+        
+<article class="container">
+    <nav class="breadcrumb">
+        <a href="/blog">← back to blog</a>
+    </nav>
+    
+    <header class="post-header">
+        <h1>Olfactory Models</h1>
+        <time class="meta-date">January 29, 2026</time>
+    </header>
+
+    <div class="post-content">
+        <p>The probability of response is $P(x) = \frac{1}{1 + e^{-x}}$ as seen in <code>sigmoid()</code></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="font-weight:bold">def</span> get_rate(voltage, threshold):
+</span></span><span style="display:flex;"><span>    <span style="font-style:italic"># This will render in clean black and white</span>
+</span></span><span style="display:flex;"><span>    <span style="font-weight:bold">return</span> max(0, voltage - threshold)
+</span></span></code></pre></div>
+    </div>
+</article>
+
+
+</body>
+</html>

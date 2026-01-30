@@ -1,0 +1,36 @@
+baseURL = "http://gokulgirish.github.io/"
+title = "Gokul T G"
+theme = "blogtheme"
+
+[markup]
+  [markup.highlight]
+    noClasses = true       # Tells Hugo to keep handling colors...
+    # ...but your CSS now handles the box!
+    style = "bw"      
+    codeFences = true
+
+[params]
+    author = "Gokul T G"
+    math = true
+
+[params.social]
+    bluesky = "https://bsky.app/profile/gokulgirish.bsky.social"
+    linkedin = "https://www.linkedin.com/in/gokul-girish/"
+
+[[menu.main]]
+    name = "home"
+    url = "/"
+    weight = 10
+[[menu.main]]
+    name = "blog"
+    url = "/blog"
+    weight = 20
+[[menu.main]]
+    name = "projects"
+    url = "/projects"
+    weight = 30
+[[menu.main]]
+    name = "notes"
+    url = "/notes"
+    weight = 40
+

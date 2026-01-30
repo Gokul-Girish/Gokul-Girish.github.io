@@ -1,0 +1,17 @@
+<footer class="container">
+    <hr class="elegant-divider">
+    <div class="social-icons">
+    {{ with .Site.Params.social.bluesky }}
+        <a href="{{ . }}" target="_blank" aria-label="Bluesky">
+            {{ partial "svgs/bluesky.svg" . }}
+        </a>
+    {{ end }}
+
+    {{ with .Site.Params.social.linkedin }}
+        <a href="{{ . }}" target="_blank" aria-label="LinkedIn">
+            {{ partial "svgs/linkedin.svg" . }}
+        </a>
+    {{ end }} 
+</div>
+    <p class="meta-text">&copy; {{ now.Year }} {{ .Site.Params.author }}</p>
+</footer>

@@ -1,0 +1,207 @@
+/* Standard CSS Variables */
+:root {
+    --text-color: #1a1c20;
+    --muted-color: #71717a;
+    --font-main: 'IBM Plex Mono', monospace;
+    --base-font-size: 16px;
+    --border-color: #e4e4e7;
+}
+
+body {
+    font-family: var(--font-main);
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--text-color);
+    margin: 0;
+}
+
+.container {
+    max-width: 800px;  /* Matches the Chicago7 width logic */
+    margin: 0 auto;    /* This is the magic line: it centers the block on the screen */
+    padding: 0 1.25rem; /* Prevents text from hitting the edges on mobile */
+    width: 100%;       /* Ensures it stays responsive */
+}
+
+/* Navigation Wrapper */
+nav.container {
+    display: flex;
+    justify-content: left; /* Centers the menu horizontally */
+    padding: 2rem 0 1rem;    /* Combined your padding values */
+}
+
+/* The List (ul) - This handles the horizontal layout and bullets */
+.nav-links {
+    display: flex;           /* Aligns items in a row */
+    list-style: none;        /* Removes the bullets */
+    padding: 0;
+    margin: 0;
+    gap: 2.5rem;             /* Space between items */
+}
+
+/* The Links (a) - This is where the bold magic happens */
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 700;       
+    text-transform: lowercase; 
+    letter-spacing: 0.05em;
+    transition: color 0.2s ease;
+}
+
+.nav-links li:not(:last-child)::after {
+    content: "/";
+    margin-left: 1.25rem;   /* Half of your 2.5rem gap */
+    color: var(--border-color); /* Muted color for the slash */
+    font-weight: 400;       /* Keep the slash thinner than your bold text */
+}
+
+.landing-bio {
+    text-align: left;
+    margin: 2rem auto;
+}
+
+/* Ensures the paragraphs inside the bio are centered */
+.landing-bio p {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+/* Styles the social links you write in the markdown */
+.landing-bio a {
+    color: var(--text-color);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 2px solid rgb(0, 140, 255);
+
+}
+
+.landing-bio a:hover {
+    color: rgb(0, 140, 255); /* Text turns the same blue as the border */
+    border-bottom-color: var(--accent-yellow); /* Border shifts to your signature yellow */
+    transition: all 0.3s ease; /* Smoothly fades the color change */
+}
+
+/* Divider & Footer */
+.elegant-divider {
+    border: none;
+    border-top: 4px double var(--border-color);
+    margin: 2rem 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    align-items: center;
+}
+
+.social-icons svg {
+    width: 20px;          /* Clean, academic size */
+    height: 20px;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover svg {
+    transform: translateY(-2px);
+}
+
+
+.meta-text {
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--muted-color);
+}
+
+/* List Page Styles */
+.page-header h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-transform: lowercase;
+}
+
+.post-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: baseline;
+}
+
+.meta-date {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.post-link {
+    text-decoration: none;
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.post-link:hover {
+    text-decoration: underline;
+}
+
+/* Single Post Content */
+.breadcrumb {
+    margin-bottom: 2rem;
+}
+
+.breadcrumb a {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+.post-content h2, .post-content h3 {
+    margin-top: 2rem;
+    line-height: 1.2;
+}
+
+.post-content p {
+    margin-bottom: 1.5rem;
+}
+
+/* Elegant Blockquotes (for research citations) */
+blockquote {
+    border-left: 3px solid var(--border);
+    padding-left: 1rem;
+    margin-left: 0;
+    font-style: italic;
+    color: var(--text-muted);
+}
+
+/* --- CHICAGO7 CODE STYLING --- */
+
+/* 1. Large Code Blocks (The Box) */
+.highlight pre {
+    background-color: #f8f9fa !important; /* Very light grey, like paper */
+    color: #1a1a1a !important;            /* Near-black text */
+    padding: 1.5rem !important;
+    border-radius: 4px;
+    margin: 2rem 0;
+    overflow-x: auto;
+    border: 1px solid #e1e4e8;            /* Subtle outer frame */
+    border-left: 4px solid #333 !important; /* Bold dark accent */
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* 2. Text inside the Large Blocks */
+.highlight pre code {
+    font-family: 'IBM Plex Mono', monospace !important;
+    background: transparent !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+/* 3. Inline Code (Variables in sentences) */
+:not(pre) > code {
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: #f1f1f1;            /* Subtle highlight */
+    color: #222;                          /* Dark text, no "rainbow" colors */
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-size: 0.9em;
+    border: 1px solid #ddd;               /* Defines the 'pill' shape */
+}
